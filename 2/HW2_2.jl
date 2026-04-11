@@ -83,5 +83,5 @@ T_ftcs_ad = ftcs_advection(T, dt, dx, dy, nt, alpha)
 # plot final condition
 plot3 = heatmap(x, y, T_ftcs_ad[end,:,:], title="Temperature at t=0.25",
                  xlabel="x", ylabel="y", colorbar_title="T",
-                 seriescolor  = :viridis, aspect_ratio=1, zlims=(0,1));
+                 seriescolor  = :viridis, aspect_ratio=1, clims=(0,1));
 savefig(plot3, "2/advection_ftcs.png")
